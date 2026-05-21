@@ -67,12 +67,19 @@ addEverything(10,15,20,25); // 70
 
 
 // return statement example
-
+// Type:1
 function greet(){
-    return "Welcome Back Learner";
+    return "Welcome Back Learner"
 }
+console.log(greet()); // Welcome Back Learner
+// Type:2
+function greet(){
+    return "Welcome Back Learner"
+}
+let message = greet();
+console.log(message.toUpperCase()); //WELCOME BACK LEARNER
+console.log(message + "!!!"); // Welcome BAck Learner!!! 
 
-console.log(greet());
 
 // Real-time Example for calculating student grade
 function calculateGrade(studentName, studentMark){
