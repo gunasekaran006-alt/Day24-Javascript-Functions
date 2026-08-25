@@ -2,7 +2,7 @@
 
 // function - keyword
 // functionName - function name
-// () - parameter
+// () - parameter - Invocation operator / call operator
 // { - function body
 // }
 // functionName() - function callback with arguments
@@ -84,7 +84,6 @@ console.log(message + "!!!"); // Welcome BAck Learner!!!
 // Real-time Example for calculating student grade
 function calculateGrade(studentName, studentMark){
     let grade;
-
     if(studentMark >= 90){
         grade = "A";
     } else if(studentMark >= 75){
@@ -94,30 +93,24 @@ function calculateGrade(studentName, studentMark){
     } else {
         grade = "Fail";
     }
-
     // console.log(`Hi ${studentName} you got ${grade} grade`);
     return `Hi ${studentName} you got ${grade} grade`;
-
 };
-
-// calculateGrade("Narasimhan", 82);
-console.log(calculateGrade("Narasimhan", 82));
-console.log(calculateGrade("Someone", 94));
+// calculateGrade("Guna", 82);
+console.log(calculateGrade("Guna", 82));
 
 // Advance function pattern
-
 // Nested functions
 function parent(functionName){
     console.log("Parent Function Executed");
     console.log(functionName, "Function Executed");
-
     function child(){
         console.log("Child Function executed");
     };
     child();
 };
-
 parent("Parent");
+
 
 // Most wanted interview problem
 // Function Currying
