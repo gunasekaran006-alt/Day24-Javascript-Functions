@@ -112,18 +112,26 @@ function parent(functionName){
 parent("Parent");
 
 
+
+
 // Most wanted interview problem
 // Function Currying
+// type:1
+function multiply(a){
+    return function(b){
+        return function(c){
+            return a * b * c;
+        }
+    };
+};
+console.log(multiply(5)(2)(3)); // 30
 
-// function multiply(a){
-//     return function(b){
-//         return function(c){
-//             return a + b + c;
-//         }
-//     };
-// };
-// console.log(multiply(5)(2)(3));
 
+//(OR) type:2 | BEST WAY: ES6 Arrow Function
+const multiplication = a => b => c =>  a * b * c; 
+console.log(multiplication(5)(2)(3)); // 30
+
+// example type:1
 function authentication(username){
     return function(password){
         if(username === "admin@mail.com" && password === "admin@123"){
